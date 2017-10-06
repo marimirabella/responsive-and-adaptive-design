@@ -1,0 +1,57 @@
+.share {
+	position: relative;
+	top: 15px;
+	color: $color;
+	background-color: #fff;
+	font-weight: bold;
+	max-width: 289px;
+	height: 107px;
+	clear: left;
+	padding: 12px 15px 0;
+	border: 1px solid #adadad;
+	-ms-box-shadow: 0px 0px 3px #adadad;
+	-o-box-shadow: 0px 0px 3px #adadad;
+	box-shadow: 0px 0px 3px #adadad;
+	visibility: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		top: -7px;
+		left: 135px;
+		border: 7px solid #fff;
+		box-shadow: -1px 1px 2px #969696;
+		transform: rotate(135deg);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 130px;
+		border-width: 11px;
+		border-style: solid;
+		border-color: #fff;
+	}
+}
+
+.share__with {
+	display: inline-block;
+	@include font(18px, 16px);
+}
+
+.share__close-btn {
+	float: right;
+	@extend .share__with;
+}
+
+.socials {
+	margin-top: 14px;
+	visibility: visible;
+}
+
+.socials__item {
+	display: inline-block;
+}
+
+.socials__item:not(:last-child) {
+	margin-right: 13px;
+}
